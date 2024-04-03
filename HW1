@@ -1,1 +1,62 @@
 
+Data Communications Homework #01
+Due date	Apr. 8th, 2024	Instructor	Yoo, Younghwan
+
+
+
+1. What is the bit rate for the signal in the following figure?
+
+
+
+
+
+
+
+
+
+
+2. How many bits can fit on a link with a 2 ms delay if the bandwidth of the link is
+(a)1 Mbps?
+
+(b)10 Mbps?
+
+
+
+
+
+
+
+
+
+3. We measure the performance of a telephone line with 4 KHz of bandwidth. When the signal is 10 V, the noise is 5 mV. What is the maximum data rate supported by this telephone line? (Note: The power is proportional to the voltage square.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. We have a channel with 4 kHz bandwidth. If we want to send data at 200 kbps, what is the minimum SNRdB? What is the SNR? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
