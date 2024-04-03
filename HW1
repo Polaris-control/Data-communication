@@ -1,12 +1,24 @@
-
 Data Communications Homework #01
 Due date	Apr. 8th, 2024	Instructor	Yoo, Younghwan
-
+Student ID	202155628	Name	HU kaifeng
 
 
 1. What is the bit rate for the signal in the following figure?
+Solution:
+Bit rate = Total number of bits / Total time
 
+Bit rate = 8 bits / 16 ns
 
+First, let's convert nanoseconds to seconds:
+1 ns = 1 × 10^-9 seconds
+
+So 16 ns = 16 × 10^-9 seconds
+
+Bit rate = 8 bits / (16 × 10^-9 seconds)
+≈ 8 / (16 × 10^-9)
+≈ 500 × 10^6 bits/second
+
+Bit rate = 500 	Mbps
 
 
 
@@ -17,8 +29,19 @@ Due date	Apr. 8th, 2024	Instructor	Yoo, Younghwan
 
 2. How many bits can fit on a link with a 2 ms delay if the bandwidth of the link is
 (a)1 Mbps?
+Solution:
+Bandwidth = 1 Mbps = 1,000,000 bits per second
+Delay = 2 ms = 2 × 10^-3 seconds
+
+Maximum number of bits = 1,000,000 bits/second × 2 × 10^-3 seconds
+= 2,000 bits
 
 (b)10 Mbps?
+Solution:
+Bandwidth = 10 Mbps = 10,000,000 bits per second
+Delay = 2 ms = 2 × 10^-3 seconds
+Maximum number of bits = 10,000,000 bits/second × 2 × 10^-3 seconds
+= 20,000 bits
 
 
 
@@ -28,7 +51,31 @@ Due date	Apr. 8th, 2024	Instructor	Yoo, Younghwan
 
 
 
-3. We measure the performance of a telephone line with 4 KHz of bandwidth. When the signal is 10 V, the noise is 5 mV. What is the maximum data rate supported by this telephone line? (Note: The power is proportional to the voltage square.)
+
+3.We measure the performance of a telephone line with 4 KHz of bandwidth. When the signal is 10 V, the noise is 5 mV. What is the maximum data rate supported by this telephone line? (Note: The power is proportional to the voltage square.)
+
+Solution:
+ Calculate the SNR:
+   SNR (in dB) = 10 * log10 (Signal Power / Noise Power)
+   Signal Power = (Signal Voltage)^2 = (10 V)^2 = 100 V^2
+   Noise Power = (Noise Voltage)^2 = (5 mV)^2 = (5 * 10^-3 V)^2 
+= 25 * 10^-6 V^2
+
+   SNR = 10 * log10 (100 / (25 * 10^-6))
+       ≈ 10 * log10 (4,000,000)
+       ≈ 10 * 6.602
+       ≈ 66.02 dB
+
+Use the Shannon capacity:
+   capacity = Bandwidth * log2(1 + SNR)
+   Bandwidth = 4 kHz = 4,000 Hz
+   Maximum Data Rate = 4,000 * log2(1 + 10^(66.02/10))
+                     ≈ 4,000 * log2(1 + 1095.45)
+                     ≈ 4,000 * log2(1096.45)
+                     ≈ 4,000 * 10.095
+                     ≈ 40,380 bits per second (bps)
+
+Therefore, the maximum data rate supported by this telephone line is approximately 40,380 bps.
 
 
 
@@ -43,20 +90,3 @@ Due date	Apr. 8th, 2024	Instructor	Yoo, Younghwan
 
 
 4. We have a channel with 4 kHz bandwidth. If we want to send data at 200 kbps, what is the minimum SNRdB? What is the SNR? 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
