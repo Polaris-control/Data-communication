@@ -1,1 +1,79 @@
 
+1. Calculate the baud rate for the given bit rate and type of modulation.
+(a)3000 bps, FSK
+Solution: For FSK, each symbol represents a different frequency, so the baud rate (symbols per second) is equal to the bit rate (bits per second). Therefore, for 3000 bps with FSK, the baud rate is also 3000 symbols per second.
+
+(b)2000 bps, ASK
+Solution: For ASK, each symbol represents a different amplitude level. The baud rate 	is still equal to the bit rate because each symbol represents one bit. Hence, for 2	000 bps with ASK, the baud rate is also 2000 symbols per second.
+(c)4000 bps, QPSK
+Solution:In QPSK, each symbol represents two bits. Therefore, the baud rate is half  	the bit rate. So, for  4000 bps with QPSK, the baud rate would be 2000 symbols   	per second.
+
+(d)36000 bps, 64-QAM
+Solution:In 64-QAM, each symbol represents 6 bits because it's a higher-order modu	lation scheme. So, to calculate the baud rate, we divide the bit rate by the number
+ of bits represented by each symbol. Thus, for  36000 bps with 64-QAM, the     	baud rate would be 36000 / 6 = 6000 symbols per second
+
+
+
+2.A corporation has a medium with a 1-MHz bandwidth (lowpass). The corporation needs to create 10 separate independent channels each capable of sending at least 1 Mbps. The company has decided to use QAM technology. What is the minimum number of bits per baud for each channel? What is the number of points in the constellation diagram for each channel? Let .
+Solution:
+
+
+To determine the minimum number of bits per baud for each channel and the number of points in the constellation diagram, we first need to understand the relationship between bandwidth, bit rate, and modulation scheme, especially in the context of Quadrature Amplitude Modulation (QAM).
+
+Bandwidth  = 1 MHz = 10^6 Hz
+Bit rate  = 1 Mbps = 10^6 bps
+Number of channels = 10
+
+For a QAM modulation scheme, the maximum bit rate (R) for a given bandwidth (B) can be calculated using the Nyquist formula  R=2*B*log2L
+
+Log2L= R/2B=10^6/2*10^6=1/2
+
+L= 2^(1/2)
+
+
+
+So, for each channel:
+Minimum number of bits per baud (bits per symbol) = 0.5 bits
+Number of points in the constellation diagram = 2^(1/2) points
+
+
+
+
+
+3. Draw the constellation diagram for the following cases. Find the peak amplitude value for each case and define the type of modulation (ASK, FSK, PSK, or QAM).
+(a)Two points at (2, 0) and (3, 0)
+Solution: These points lie on the real axis, indicating amplitude modulation. Specifically, they represent different levels of amplitude. Since there are two distinct levels, it's likely Amplitude Shift Keying (ASK).
+   Peak amplitude value: 3
+   Modulation type: ASK
+
+
+
+
+
+
+
+(b)Two points at (3, 0) and (-3, 0)
+Solution:Similar to case (a), these points also lie on the real axis, indicating amplitude modulation. As there are two distinct levels, it's also likely Amplitude Shift Keying (ASK).
+   Peak amplitude value: 3
+   Modulation type: ASK
+
+
+
+
+
+(c)Four points at (2, 2), (-2, 2), (-2, -2), and (2, -2)
+Solution:These points form a square shape on the complex plane, indicating both amplitude and phase variations. Each point is equidistant from the origin, suggesting that they have the same amplitude. However, they differ in phase.
+Since there are both amplitude and phase variations with multiple levels, it's Quadrature Amplitude Modulation (QAM).
+   Peak amplitude value: 2
+   Modulation type: QAM
+
+
+
+
+
+
+
+(d)Two points at (0, 2) and (0, -2)
+Solution:These points lie on the imaginary axis, indicating phase modulation. Specifically, they represent different phases. Since there are two distinct phases, it's likely Phase Shift Keying (PSK).
+   Peak amplitude value: 2
+   Modulation type: PSK
