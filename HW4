@@ -1,1 +1,53 @@
+1. We need to use synchronous TDM and combine 20 digital sources, each of 200 Kbps. Each output slot carries 2 bit from each digital source, but one extra bit is added to each frame for synchronization. Answer the following questions:
+(a)What is the size of an output frame in bits?
+
+
+(b)What is the output frame rate?
+
+
+(c)What is the duration of an output frame?
+
+
+(d)What is the output data rate?
+
+
+(e)What is the efficiency of the system (ratio of useful bits to the total bits)?
+
+
+
+
+
+2. We have 12 sources, each creating 500 8-bit characters per second on average. Since only some of these sources are active at any moment, we use statistical TDM to combine these sources using character interleaving. Each frame carries 6 slots at a time, but we need to add 4-bit addresses to each slot. Answer the following questions:
+(a)What is the size of an output frame in bits?
+
+
+(b)What is the output frame rate?
+
+
+(c)What is the duration of an output frame?
+
+
+(d)What is the output data rate?
+
+
+
+
+3. What is the minimum number of bits in a PN sequence if we use FHSS with a channel bandwidth of  and ?
+
+
+
+
+
+4. Ten sources, six with a bit rate of 200 Kbps and four with a bit rate of 400 Kbps, are to be combined using multilevel TDM without synchronizing bits. Answer the following questions about the final state of the multiplexing.
+
+(a)What is the size of a frame in bits?
+
+
+(b)What is the frame rate?
+
+
+(c)What is the duration of a frame?
+
+
+(d)What is the data rate?
 
