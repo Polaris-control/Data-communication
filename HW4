@@ -1,1 +1,163 @@
 
+Data Communications Homework #04
+Due date	May 23rd, 2024	Instructor	Yoo, Younghwan
+Student ID 202155628	Name	HUKAIFENG
+
+1. We need to use synchronous TDM and combine 20 digital sources, each of 200 Kbps. Each output slot carries 2 bit from each digital source, but one extra bit is added to each frame for synchronization. Answer the following questions:
+(a)What is the size of an output frame in bits?
+Number of digital sources N = 20
+Data rate of each source Rs = 200 Kbps
+Each output slot carries 2 bits from each digital source
+One extra bit is added to each frame for synchronization
+
+
+Solution：Each digital source contributes 2 bits per frame, and there are 20 sources. Additionally, 1 extra bit is added for synchronization. Therefore, the total size of an output frame S is:
+S = 20sources * 2bits/source + 1synchronization bit
+S = 40bits + 1bit
+S = 41 bits
+
+
+(b)What is the output frame rate?
+Solution:
+The data rate of each source is 200 Kbps. Since each source contributes 2 bits per frame, the frame rate (f) is given by the data rate divided by the number of bits contributed per frame by each source.
+
+ f = Rs / 2bits/frame = 100000 frames/sec
+
+
+
+(c)What is the duration of an output frame?
+Solution:
+f =100000 frames/sec
+T = 1/f = 10microseconds
+
+
+(d)What is the output data rate?
+Solution:
+The output data rate (Ro) is the product of the frame rate and the size of each frame.
+
+Ro = f * S
+Ro = 100000 frames/sec * 41 bits/frame
+Ro = 4100000bits/sec
+Ro = 4.1Mbps
+
+
+
+
+(e)What is the efficiency of the system (ratio of useful bits to the total bits)?
+Solution:
+Efficiency is calculated as the ratio of the number of useful bits to the total number of bits in a frame.
+
+Useful bits per frame = 20sources * 2 bits/source = 40 bits
+
+Total bits per frame = 41 bits
+
+efficiency  = Useful bits / Total bits
+efficiency  = 40 bits / 41 bits =0.9756
+
+
+
+
+
+
+2. We have 12 sources, each creating 500 8-bit characters per second on average. Since only some of these sources are active at any moment, we use statistical TDM to combine these sources using character interleaving. Each frame carries 6 slots at a time, but we need to add 4-bit addresses to each slot. Answer the following questions:
+(a)What is the size of an output frame in bits?
+Solution: 
+Number of sources = 12
+Each source generates 500 8-bit characters per second on average
+Using statistical TDM with character interleaving
+Each frame carries 6 slots at a time
+Each slot includes an additional 4-bit address
+
+Each slot contains one 8-bit character and a 4-bit address, so each slot's size is:
+8bits + 4bits = 12bits
+
+Each frame contains 6 slots, so the total size of each frame is:
+
+6 slots * 12bits/slot = 72bits
+
+
+
+
+(b)What is the output frame rate?
+Solution:Each source generates 500 characters per second, and there are 12 sources. However, because we are using statistical TDM, we consider the total number of characters actually transmitted per second.
+
+The total number of characters per second is:
+Frame rate = 6000characters/second / 6 characters /frame = 1000 frames/second
+
+
+(c)What is the duration of an output frame?
+Solution:
+The duration of an output frame is the reciprocal of the frame rate.
+Frame duration = 1/1000 frames/second = 0.001 second
+
+
+
+(d)What is the output data rate?
+Solution:
+The output data rate is the product of the frame rate and the size of each frame.
+
+Output data rate = 1000 frames/second * 72  bits/frame = 72000 bits/second = 72 Kbps
+
+
+
+
+
+3. What is the minimum number of bits in a PN sequence if we use FHSS with a channel bandwidth of  and ?
+Solution:
+ 
+
+Number of channels :
+N = Bss / B
+N= 128KHz / 8KHz = 16
+Minimum Number of bits: 
+2^m >= N
+m=log2^16 =4
+
+
+4. Ten sources, six with a bit rate of 200 Kbps and four with a bit rate of 400 Kbps, are to be combined using multilevel TDM without synchronizing bits. Answer the following questions about the final state of the multiplexing.
+
+(a)What is the size of a frame in bits?
+Solution:
+Six sources each with a bit rate of 200 Kbps.
+Four sources each with a bit rate of 400 Kbps.
+A frame in TDM contains one time slot for each source. Each time slot contains one bit from each source.
+
+Six sources at 200 Kbps:
+Each source contributes 1 bit per time slot.
+Total contribution from these six sources = 6*1 = 6 bits per frame.
+
+Four sources at 400 Kbps:
+Each source contributes 1 bit per time slot.
+Total contribution from these four sources = 4*1 = 4 bits per frame.
+
+Therefore, the size of a frame is:
+Frame size = 6bits + 4bits = 10bits
+
+(b)What is the frame rate?
+Solution:
+The frame rate is determined by the source with the highest bit rate, as each source contributes one bit per frame.
+The highest bit rate among the sources is 400 Kbps.
+Therefore, each of these four sources must contribute 400,000 bits per second.
+Since each source contributes 1 bit per frame, the frame rate must be:
+Frame rate = 400,000 frames/second
+
+
+
+(c)What is the duration of a frame?
+Solution:
+The duration of a frame is the inverse of the frame rate:
+Frame duration = 1/Frame rate = 1/{400,000 = 2.5 microseconds
+
+
+
+(d)What is the data rate?
+Solution:
+The data rate of the combined signal is the total number of bits in each frame multiplied by the frame rate.
+
+Frame size = 10 bits 
+Frame rate = 400000 frames/second 
+
+Therefore, the data rate is:
+Data rate 10bits *400000 frames/second = 4000000 frames/second = 4Mbps
+
+
