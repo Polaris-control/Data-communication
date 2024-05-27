@@ -1,0 +1,72 @@
+Data Communications Homework #04
+Due date	May 29th, 2024	Instructor	Yoo, Younghwan
+Student ID		Name	
+
+
+1. Calculate the bandwidth of the light for the following wavelength ranges (assume a propagation speed of  m):
+(a)1000 to 1200 nm
+
+
+
+
+
+
+
+
+(b)1400 to 1600 nm
+
+
+
+2. A path in a digital circuit-switched network has a data rate of 1 Mbps. The exchange of 1000 bits is required for the setup and teardown phases. The distance between two parties is 5000 km. Answer the following questions if the propagation speed is  m:
+(a)What is the total delay if 1000 bits of data are exchanged during the data transfer phase?
+
+
+
+
+
+(b)What is the total delay if 100,000 bits of data are exchanged during the data transfer phase?
+
+
+
+
+
+(c)What is the total delay if 1,000,000 bits of data are exchanged during the data transfer phase?
+
+
+
+
+
+(d)Find the delay per 1000 bits of data for each of the above cases and compare them. What can you infer from the result?
+
+
+
+
+
+3. We need a three-stage space-division switch with . We use 10 crossbars at the first and third stages and 4 crossbars at the middle stage.
+(a)Draw the configuration diagram.
+
+
+
+
+
+
+
+
+
+
+(b)Calculate the total number of crosspoints.
+
+
+
+
+(c)Find the possible number of simultaneous connections.
+
+
+
+
+(d)Find the possible number of simultaneous connections if we use a single crossbar ().
+
+
+
+
+(e)Find the blocking factor, the ratio of the number of connections in part (c) and in part (d).
