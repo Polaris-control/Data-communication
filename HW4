@@ -1,10 +1,16 @@
 Data Communications Homework #04
 Due date	May 29th, 2024	Instructor	Yoo, Younghwan
-Student ID		Name	
+Student ID	202155628	Name	HUKAIFENG
 
 
 1. Calculate the bandwidth of the light for the following wavelength ranges (assume a propagation speed of  m):
 (a)1000 to 1200 nm
+Solution:
+c=λ⋅f
+λ1 = 1000 nm
+λ2 = 1200 nm
+c (speed of light)  =  m
+bandwidth = f1-f2 = c/λ1 - c/λ2 =5×10^13 hz
 
 
 
@@ -14,32 +20,68 @@ Student ID		Name
 
 
 (b)1400 to 1600 nm
+Solution:
+c=λ⋅f
+λ1 = 1400 nm
+λ2 = 1600 nm
+c (speed of light)  =  m
+bandwidth = f1-f2 = c/λ1 - c/λ2 =1×10^14 hz
+
 
 
 
 2. A path in a digital circuit-switched network has a data rate of 1 Mbps. The exchange of 1000 bits is required for the setup and teardown phases. The distance between two parties is 5000 km. Answer the following questions if the propagation speed is  m:
 (a)What is the total delay if 1000 bits of data are exchanged during the data transfer phase?
+Solution:
+Data rate: 1 Mbps
+Bits: 1000 bits
+Distance: 5000 km
+Propagation speed: 2×108 m/s
+Total Delay Calculation
+The total delay consists of three components:
+Propagation Delay (Tp): Time for a signal to travel from the sender to the receiver.
+Transmission Delay (Tt): Time to push all the bits onto the wire.
+Processing/Setup Delay (Ts): Time for setup and teardown.
+Tp = Distance/Propagation speed = 0.025s
+Tt =  Bits / Data rate = 0.001s
+Ts = 2*Tt = 0.002s
+Ttotal = 2Tp +2Tt + Ts = 0.054 s
 
 
 
 
 
 (b)What is the total delay if 100,000 bits of data are exchanged during the data transfer phase?
+Solution:
+Tt =  Bits / Data rate = 0.1s
+Ttotal = 2Tp +2Tt + Ts = 0.252 s
+
 
 
 
 
 
 (c)What is the total delay if 1,000,000 bits of data are exchanged during the data transfer phase?
+Solution:
+Tt =  Bits / Data rate = 1s
+Ttotal = 2Tp +2Tt + Ts = 2.052 s
 
 
 
 
 
 (d)Find the delay per 1000 bits of data for each of the above cases and compare them. What can you infer from the result?
+Solution:
+For each case, let's find the delay per 1000 bits.
 
+Case (a):
+Delay per 1000 bits = 0.054s/1 = 0.054s
+	
+Case (b):
+Delay per 1000 bits = 0.054s/100 = 0.00252s	
 
-
+Case (c):
+Delay per 1000 bits = 0.054s/1000 = 0.002052s
 
 
 3. We need a three-stage space-division switch with . We use 10 crossbars at the first and third stages and 4 crossbars at the middle stage.
