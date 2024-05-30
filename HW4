@@ -78,7 +78,7 @@ Case (a):
 Delay per 1000 bits = 0.054s/1 = 0.054s
 	
 Case (b):
-Delay per 1000 bits = 0.054s/100 = 0.00252s	
+Delay per 1000 bits = 0.054s/100 = 0.00252s
 
 Case (c):
 Delay per 1000 bits = 0.054s/1000 = 0.002052s
