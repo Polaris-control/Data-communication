@@ -1,1 +1,99 @@
 
+Data Communications Homework #05
+Due date	Jun. 13th, 2024	Instructor	Yoo, Younghwan
+Student ID	202155628	Name	HU KAIFENG
+
+
+1. Given the dataword 101001111 and the divisor 10111, show the generation of the CRC codeword at the sender site.
+Solution:
+Append n−1 zeros to the end of the dataword, where n is the length of the divisor. Here, the divisor 10111 has 5 bits, so we append 4 zeros to the dataword 
+101001111
+Dataword = 1010011110000
+Use binary division (modulo 2 division) to divide the appended dataword by the divisor
+
+
+
+CRC codeword = 1010011110101
+
+2.A simple parity-check bit, which is normally added at the end of the word, cannot detect even numbers of errors. A better solution is to organize the characters in a table and create row and column parities. The bit in the row parity is sent with the byte, the column parity is sent as an extra byte. Assuming that errors occur as in the following figures, can we detect those errors? Explain.
+Solution:
+To determine how the given errors can be detected using the row and column parity method, let's analyze each scenario:
+a. An error at (R3, C3):
+Calculate the row parities for each row:
+R1: 1 1 0 0 1 1 (even parity) -> 0
+R2: 1 0 1 1 1 0 (even parity) -> 0
+R3: 0 1 1 0 0 1 (odd parity) -> 1
+R4: 0 1 0 1 0 0 (even parity) -> 0
+
+Calculate the column parity:
+C1 C2 C3 C4 C5 C6 C7 (even parity) -> 0 1 1 1 0 0 1
+
+Compare the received row parity for R3 (1) with the calculated row parity (odd parity). Since they don't match, an error at (R3, C3) is detected
+
+
+b. Two errors at (R3, C4) and (R3, C6):
+Calculate the row parities for each row:
+R1: 1 1 0 0 1 1 (even parity) -> 0
+R2: 1 0 1 1 1 0 (even parity) -> 0
+R3: 0 1 1 0 0 1 (odd parity) -> 1
+R4: 0 1 0 1 0 0 (even parity) -> 0
+
+Calculate the column parity:
+C1 C2 C3 C4 C5 C6 C7 (even parity) -> 0 1 1 1 0 0 1
+Compare the received row parity for R3 (1) with the calculated row parity (odd parity). Since they don't match, an error at (R3, C4) is detected.
+Compare the received row parity for R3 (1) with the calculated row parity (odd parity). Since they don't match, an error at (R3, C6) is detected
+
+
+
+c. Three errors at (R2, C4), (R2, C5), and (R3, C4):
+Calculate the row parities for each row:
+
+R1: 1 1 0 0 1 1 (even parity) -> 0
+R2: 1 0 1 1 1 0 (even parity) -> 0
+R3: 0 1 1 0 0 1 (odd parity) -> 1
+R4: 0 1 0 1 0 0 (even parity) -> 0
+
+Calculate the column parity:
+
+C1 C2 C3 C4 C5 C6 C7 (even parity) -> 0 1 1 1 0 0 1
+
+Compare the received row parity for R2 (0) with the calculated row parity (even parity). Since they match, no error is detected for (R2, C4).
+Compare the received row parity for R2 (0) with the calculated row parity (even parity). Since they match, no error is detected for (R2, C5).
+Compare the received row parity for R3 (1) with the calculated row parity (odd parity). Since they don't match, an error at (R3, C4) is detected.
+
+
+
+d. Four errors at (R1, C2), (R1, C6), (R3, C2), and (R3, C6):
+Calculate the row parities for each row:
+
+R1: 1 1 0 0 1 1 (even parity) -> 0
+R2: 1 0 1 1 1 0 (even parity) -> 0
+R3: 0 1 1 0 0 1 (odd parity) -> 1
+R4: 0 1 0 1 0 0 (even parity) -> 0
+Calculate the column parity:
+
+C1 C2 C3 C4 C5 C6 C7 (even parity) -> 0 1 1 1 0 0 1
+Compare the received row parity for R1 (0) with the calculated row parity (even parity). Since they match, no error is detected for (R1, C2).
+Compare the received row parity for R1 (0) with the calculated row parity (even parity). Since they match, no error is detected for (R1, C6).
+Compare the received row parity for R3 (1) with the calculated row parity (odd parity). Since they don't match, an error at (R3, C2) is detected.
+Compare the received row parity for R3 (1) with the calculated row parity (odd parity). Since they don't match, an error at (R3, C6) is detected
+
+
+
+
+
+
+3. Suppose the length of a 10Base5 cable is 2500 m. If the speed of propagation in a thick coaxial cable is 200,000,000 m/s, how long does it take for a bit to travel from the beginning to the end of the network? Assume there is a 10 delay in the equipment.
+
+
+
+
+
+
+
+
+
+
+
+
+4. In a Fast Ethernet LAN, the average size of a frame is 1000 bytes. If a noise of 2 ms occurs on the LAN, how many frames are destroyed?
