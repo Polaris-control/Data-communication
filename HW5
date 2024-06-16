@@ -86,7 +86,9 @@ Compare the received row parity for R3 (1) with the calculated row parity (odd p
 3. Suppose the length of a 10Base5 cable is 2500 m. If the speed of propagation in a thick coaxial cable is 200,000,000 m/s, how long does it take for a bit to travel from the beginning to the end of the network? Assume there is a 10 delay in the equipment.
 
 
-
+sol) We can calculate the propagation time as t = (2500 m)/(200,000,000 m/s) =
+12.5 μs. To get the total delay, we need to add propagation delay in the equipment
+(10 μs). This results in T = 22.5 μs.
 
 
 
@@ -97,3 +99,10 @@ Compare the received row parity for R3 (1) with the calculated row parity (odd p
 
 
 4. In a Fast Ethernet LAN, the average size of a frame is 1000 bytes. If a noise of 2 ms occurs on the LAN, how many frames are destroyed?
+
+sol) In a Fast Ethernet network, the data rate is 100 Mbps.
+There are 100,000,000 bits on the channel in each second, which means that 
+(2/1000) × 100,000,000 = 200,000 bits are affected by the noise.
+If each packet is 1000 bytes or 8,000 bits (assuming ASCII characters), this means 
+200,000/8,000 = 25 packets. However, since the noise can start from the beginning 
+or near the end of the first packet, 25 or 26 packets are possibly affected.
