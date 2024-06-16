@@ -86,6 +86,15 @@ Delay per 1000 bits = 0.054s/1000 = 0.002052s
 
 3. We need a three-stage space-division switch with . We use 10 crossbars at the first and third stages and 4 crossbars at the middle stage.
 (a)Draw the configuration diagram.
+Solution:
+Given data:
+
+N= 100
+n=10
+k=4
+In the first stage we have N/n=100/10-10 crossbars, each of size is 10×4. 
+In the second stage, we have 4 cross bars, each of size is 10x 10. 
+In the third stage, we have 10 cross bars, each of size is 4×10.
 
 
 
@@ -97,18 +106,23 @@ Delay per 1000 bits = 0.054s/1000 = 0.002052s
 
 
 (b)Calculate the total number of crosspoints.
-
+Solution:
+Crosspoints are where connections cross within the switch. Calculate by multiplying the number of crossbars in adjacent stages: 10×4 for stages one to two, and 4×10 for stages two to three. Multiply by 10 (the number of crossbars in stage one) for total crosspoints: 10×4×10+4×10×10=1200
 
 
 
 (c)Find the possible number of simultaneous connections.
-
+Solution:
+Since there are 4 crossbars in the middle stage and each can handle one   connection at a time, the maximum number of simultaneous connections is 4.
 
 
 
 (d)Find the possible number of simultaneous connections if we use a single crossbar ().
-
+Solution:
+If a single crossbar of 100×100 is used, it could potentially handle 100 simultaneous connections, one for each input/output pair.
 
 
 
 (e)Find the blocking factor, the ratio of the number of connections in part (c) and in part (d).
+Solution:
+The blocking factor is calculated by taking the number of possible connections in the non-blocking scenario (d) and dividing it by the number in the blocking scenario (c). Therefore, the blocking factor is 100/4=25.
